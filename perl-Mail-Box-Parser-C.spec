@@ -1,0 +1,57 @@
+#
+# Conditional build:
+# _without_tests - do not perform "make test"
+#
+%include	/usr/lib/rpm/macros.perl
+%define	pdir	Mail
+%define	pnam	Box-Parser-C
+Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
+#Summary(pl):	
+Name:		perl-Mail-Box-Parser-C
+Version:	2.034
+Release:	1
+License:	?
+Group:		Development/Languages/Perl
+Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
+# Source0-md5:	fdd05fe338ae164b997e272d604575d9
+BuildRequires:	perl-devel >= 5.6
+BuildRequires:	rpm-perlprov >= 4.1-13
+%if %{!?_without_tests:1}0
+BuildRequires:	perl-Mail-Box >= 2.032
+%endif
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+
+%description
+The Mail::Box::Parser::C implements parsing of messages in ANSI C,
+using Perl's XS extension facility.
+
+# %description -l pl
+# TODO
+
+%prep
+%setup -q -n %{pdir}-%{pnam}-%{version}
+
+%build
+%{__perl} Makefile.PL \
+	INSTALLDIRS=vendor
+%{__make}
+
+%{!?_without_tests:%{__make} test}
+
+%install
+rm -rf $RPM_BUILD_ROOT
+
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
+
+%clean
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%doc README
+%{perl_vendorarch}/Mail/Box/Parser/*.pm
+%dir %{perl_vendorarch}/auto/Mail/Box/Parser/C
+%attr(755,root,root) %{perl_vendorarch}/auto/Mail/Box/Parser/C/*.so
+%{perl_vendorarch}/auto/Mail/Box/Parser/C/*.bs
+%{_mandir}/man3/*
