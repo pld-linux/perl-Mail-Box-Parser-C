@@ -8,12 +8,12 @@
 Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
 Summary(pl):	Mail::Box::Parser::C - czytanie wiadomo¶ci z pliku z u¿yciem C (XS)
 Name:		perl-Mail-Box-Parser-C
-Version:	3.005
+Version:	3.006
 Release:	1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
-# Source0-md5:	94570bac95e031695552161096726937
+# Source0-md5:	3dfb3e2729597ae33114250cbce1b884
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
