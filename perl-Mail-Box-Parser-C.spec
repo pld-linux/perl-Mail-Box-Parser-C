@@ -3,8 +3,8 @@
 %bcond_without	tests	# do not perform "make test"
 
 %include	/usr/lib/rpm/macros.perl
-%define	pdir	Mail
-%define	pnam	Box-Parser-C
+%define		pdir	Mail
+%define		pnam	Box-Parser-C
 Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
 Summary(pl):	Mail::Box::Parser::C - czytanie wiadomo¶ci z pliku z u¿yciem C (XS)
 Name:		perl-Mail-Box-Parser-C
