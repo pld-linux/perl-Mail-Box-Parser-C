@@ -6,7 +6,7 @@
 %define		pdir	Mail
 %define		pnam	Box-Parser-C
 Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
-Summary(pl):	Mail::Box::Parser::C - czytanie wiadomo∂ci z pliku z uøyciem C (XS)
+Summary(pl.UTF-8):   Mail::Box::Parser::C - czytanie wiadomo≈õci z pliku z u≈ºyciem C (XS)
 Name:		perl-Mail-Box-Parser-C
 Version:	3.006
 Release:	1
@@ -25,9 +25,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 The Mail::Box::Parser::C implements parsing of messages in ANSI C,
 using Perl's XS extension facility.
 
-%description -l pl
-Modu≥ Mail::Box::Parser::C jest implementacj± analizowania wiadomo∂ci
-w ANSI C przy uøyciu perlowego rozszerzenia XS.
+%description -l pl.UTF-8
+Modu≈Ç Mail::Box::Parser::C jest implementacjƒÖ analizowania wiadomo≈õci
+w ANSI C przy u≈ºyciu perlowego rozszerzenia XS.
 
 %prep
 %setup -q -n %{pdir}-%{pnam}-%{version}
