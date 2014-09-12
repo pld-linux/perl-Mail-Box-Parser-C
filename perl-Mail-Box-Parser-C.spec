@@ -60,5 +60,4 @@ rm -rf $RPM_BUILD_ROOT
 %dir %{perl_vendorarch}/auto/Mail/Box/Parser
 %dir %{perl_vendorarch}/auto/Mail/Box/Parser/C
 %attr(755,root,root) %{perl_vendorarch}/auto/Mail/Box/Parser/C/*.so
-%{perl_vendorarch}/auto/Mail/Box/Parser/C/*.bs
 %{_mandir}/man3/*
