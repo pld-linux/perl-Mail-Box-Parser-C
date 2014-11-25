@@ -2,9 +2,9 @@
 # Conditional build:
 %bcond_without	tests	# do not perform "make test"
 
-%include	/usr/lib/rpm/macros.perl
 %define		pdir	Mail
 %define		pnam	Box-Parser-C
+%include	/usr/lib/rpm/macros.perl
 Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
 Summary(pl.UTF-8):	Mail::Box::Parser::C - czytanie wiadomości z pliku z użyciem C (XS)
 Name:		perl-Mail-Box-Parser-C
@@ -14,6 +14,7 @@ License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-module/%{pdir}/%{pdir}-%{pnam}-%{version}.tar.gz
 # Source0-md5:	3dfb3e2729597ae33114250cbce1b884
+URL:		http://search.cpan.org/dist/Mail-Box-Parser-C/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
 %if %{with tests}
