@@ -4,7 +4,6 @@
 
 %define		pdir	Mail
 %define		pnam	Box-Parser-C
-%include	/usr/lib/rpm/macros.perl
 Summary:	Mail::Box::Parser::C - reading messages from file using C (XS)
 Summary(pl.UTF-8):	Mail::Box::Parser::C - czytanie wiadomości z pliku z użyciem C (XS)
 Name:		perl-Mail-Box-Parser-C
